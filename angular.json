@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-starter": {
+    "creditito": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-starter",
+            "outputPath": "dist/creditito",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "buildTarget": "angular-starter:build"
+            "buildTarget": "creditito:build"
           },
           "configurations": {
             "production": {
-              "buildTarget": "angular-starter:build:production"
+              "buildTarget": "creditito:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "angular-starter:build"
+            "buildTarget": "creditito:build"
           }
         },
         "lint": {
@@ -88,11 +88,11 @@
         "cypress-run": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "angular-starter:serve"
+            "devServerTarget": "creditito:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-starter:serve:production"
+              "devServerTarget": "creditito:serve:production"
             }
           }
         },
@@ -106,27 +106,27 @@
         "ct": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "angular-starter:serve",
+            "devServerTarget": "creditito:serve",
             "watch": true,
             "headless": false,
             "testingType": "component"
           },
           "configurations": {
             "development": {
-              "devServerTarget": "angular-starter:serve:development"
+              "devServerTarget": "creditito:serve:development"
             }
           }
         },
         "e2e": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "angular-starter:serve",
+            "devServerTarget": "creditito:serve",
             "watch": true,
             "headless": false
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-starter:serve:production"
+              "devServerTarget": "creditito:serve:production"
             }
           }
         }
@@ -134,6 +134,7 @@
     }
   },
   "cli": {
-    "schematicCollections": ["@cypress/schematic", "@schematics/angular"]
+    "schematicCollections": ["@cypress/schematic", "@schematics/angular"],
+    "analytics": "4c8120bd-11b4-4410-afdc-f14f42ffd7f4"
   }
 }
